@@ -12,8 +12,7 @@
         Créez un conteneur avec la commande suivante :
 
         bash
-
-az storage container create --name <nom_conteneur> --account-name <nom_compte_stockage> --auth-mode login
+        az storage container create --name <nom_conteneur> --account-name <nom_compte_stockage> --auth-mode login
 
 Téléchargez un fichier blob avec cette commande :
     ![alt text](<Rajout du premier blob au conteneur.png>)
