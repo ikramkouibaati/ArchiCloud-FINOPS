@@ -1,37 +1,9 @@
-Étape 1 : Création d'un VNet avec plusieurs sous-réseaux
 
-    Dans le portail Azure, créer un réseau virtuel (Virtual Network) avec deux sous-réseaux :
-        Nom du VNet : VNet-Lab2
-        Plage d'adresses : 10.1.0.0/16
-        Sous-réseau 1 : 10.1.1.0/24
-        Sous-réseau 2 : 10.1.2.0/24
-    
-
-Commande équivalente (Azure CLI)
-
-az network vnet create \
-  --name VNet-Lab2 \
-  --resource-group Lab_FINOPS \
-  --address-prefix 10.1.0.0/16 \
-  --subnet-name Sous-reseau-1 \
-  --subnet-prefix 10.1.1.0/24
-
-az network vnet subnet create \
-  --vnet-name VNet-Lab2 \
-  --name Sous-reseau-2 \
-  --address-prefix 10.1.2.0/24 \
-  --resource-group Lab_FINOPS
-
-Voici une version adaptée de votre README pour Lab 2, intégrant les étapes détaillées que je vous ai fournies :
 Lab 2 : Implémentation de réseaux virtuels Azure (VNet)
 Étape 1 : Création d'un VNet avec plusieurs sous-réseaux
 
-    Dans le portail Azure, créez un réseau virtuel (Virtual Network) avec deux sous-réseaux :
-        Nom du VNet : VNet-Lab2
-        Plage d'adresses : 10.1.0.0/16
-        Sous-réseau 1 : 10.1.1.0/24
-        Sous-réseau 2 : 10.1.2.0/24
-    Capture d’écran 1
+
+    Lab-2/Déploiement VNET.png
 
 Commande équivalente (Azure CLI)
 
@@ -54,7 +26,8 @@ az network vnet subnet create \
 
     Créez un Groupe de Sécurité Réseau (NSG) et configurez les règles pour autoriser le trafic SSH (port 22) et RDP (port 3389).
 
-    Capture d’écran 2
+    Lab-2/Création NSG.png
+    Lab-2/Règles.png
 
     az network nsg create \
   --resource-group <nom_du_groupe> \
@@ -109,9 +82,13 @@ az vm create \
     Configurez le peering entre VNet-Lab2 et un autre réseau virtuel :
         Sélectionnez le VNet cible et configurez les options telles que Autoriser le transit de passerelle et Autoriser le trafic transféré si nécessaire.
 
+        Lab-2/Lien peering.png
+
     az network vnet peering create \
   --name VNet2toVNet1 \
   --resource-group <> \
   --vnet-name VNet-Lab2 \
   --remote-vnet <vnet-id-de-l-autre-VNet> \
   --allow-vnet-access
+
+  ![alt text](<Suppression ressources lab 1&2.png>)
