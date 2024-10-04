@@ -1,0 +1,2 @@
+De mon coté j'ai une erreur lors de la p^remière étape s'agissant de la création du Cosmos Azure, ça ne permet pas d'avoir les options de Region et ça empeche alors la validation de la configuration 
+![alt text](image.png)
