@@ -7,7 +7,7 @@
    az appservice plan create --name Lab3AppServicePlan --resource-group Lab3ResourceGroup --sku B1 --is-linux
 
 ##   Étape 2: Déployer une application web sur Azure App Service
-   Lab-3/Déploiement réussi IkramAPP.png
+   ![alt text](<Déploiement réussi Ikram APP.png>)
 
     **Créer une application web** :
     az webapp create --resource-group Lab3ResourceGroup --plan Lab3AppServicePlan --name Lab3WebApp --runtime "PYTHON|3.8"
@@ -18,7 +18,7 @@
 ##Étape 3: Configurer des domaines personnalisés et des certificats SSL
 
     Ajouter un domaine personnalisé :
-    Lab-3/Domaine personnalisé .png
+   ![alt text](<Domaine personnalisé.png>)
 
     az webapp config hostname add --webapp-name Lab3WebApp --resource-group Lab3ResourceGroup --hostname yourcustomdomain.com
 
@@ -26,8 +26,9 @@
     az webapp config ssl bind --certificate-thumbprint yourCertThumbprint --ssl-type SNI --name Lab3WebApp --resource-group Lab3ResourceGroup
 
 
-##Étape 4: Implémenter des slots de déploiement pour le staging et la production
+## Étape 4: Implémenter des slots de déploiement pour le staging et la production
     Créer un slot de déploiement pour le staging :
-    Lab-3/Erreur Slots.png
+   ![alt text](<Erreur Slots.png>)
+    
 
     
