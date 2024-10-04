@@ -28,7 +28,9 @@
 
 ## Étape 4: Implémenter des slots de déploiement pour le staging et la production
     Créer un slot de déploiement pour le staging :
-   ![alt text](<Erreur Slots.png>)
+  
+![Erreur Slots](https://github.com/user-attachments/assets/b3689e7a-1ba3-4077-8588-c2dff7801d2c)
+
     
 
     
